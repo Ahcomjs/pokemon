@@ -11,7 +11,8 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-color: #f0f0f0;
+      max-width: 100%;
+      background-color: #ffffff;
     }
   </style>
   

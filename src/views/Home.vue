@@ -22,10 +22,19 @@ export default {
 }
 
 .logo {
-    font-size: 5.5em;
     margin-bottom: 16px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
     font-family: "Pokemon Solid", sans-serif;
     color: #ffcb05;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (max-width: 768px) {
+    .logo {
+        max-width: 300px;
+    }
+}
+
 </style>
