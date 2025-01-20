@@ -19,6 +19,7 @@ export default {
 <style scoped>
 .home {
     text-align: center;
+    
 }
 
 .logo {
