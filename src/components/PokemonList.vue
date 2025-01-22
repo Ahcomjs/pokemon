@@ -16,8 +16,8 @@
             </select>
         </div>
 
-        <div v-if="loading" class="loading">Loading...</div>
-        <div v-else-if="filteredPokemonList.length === 0" class="notfound">Not Found</div>
+        <div v-if="loading" class="found-text">Loading...</div>
+        <div v-else-if="filteredPokemonList.length === 0" class="found-text">Not Found</div>
 
         <div v-else class="pokemon-list">
             <Card v-for="pokemon in filteredPokemonList" :key="pokemon.id" :pokemon="pokemon" />
@@ -38,7 +38,6 @@ export default {
     data() {
         return {
             loading: true,
-            notfound: true,
             searchQuery: '',
             selectedType: '',
             selectedAbility: '',
@@ -131,13 +130,7 @@ body {
     padding: 20px;
 }
 
-.loading {
-    margin-top: 20px;
-    font-family: Montserrat;
-    font-size: 50px;
-}
-
-.notfound {
+.found-text{
     margin-top: 20px;
     font-family: Montserrat;
     font-size: 50px;
