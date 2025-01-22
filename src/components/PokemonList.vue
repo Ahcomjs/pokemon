@@ -1,12 +1,7 @@
 <template>
     <div>
         <div class="filters">
-            <input 
-                type="text" 
-                v-model="searchQuery" 
-                placeholder="Search by name..."
-                class="input"
-            />
+            <input type="text" v-model="searchQuery" placeholder="Search by name..." class="input" />
             <select v-model="selectedType" class="select">
                 <option value="">Filter by type</option>
                 <option v-for="type in types" :key="type.type" :value="type.type.toLowerCase()">
@@ -22,6 +17,8 @@
         </div>
 
         <div v-if="loading" class="loading">Loading...</div>
+        <div v-else-if="filteredPokemonList.length === 0" class="notfound">Not Found</div>
+
         <div v-else class="pokemon-list">
             <Card v-for="pokemon in filteredPokemonList" :key="pokemon.id" :pokemon="pokemon" />
         </div>
@@ -41,6 +38,7 @@ export default {
     data() {
         return {
             loading: true,
+            notfound: true,
             searchQuery: '',
             selectedType: '',
             selectedAbility: '',
@@ -87,17 +85,18 @@ export default {
 
 <style scoped>
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
 }
+
 .filters {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    max-width: 100%; 
-    box-sizing: border-box; 
-    padding: 0 10px; 
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .input,
@@ -115,13 +114,13 @@ export default {
 }
 
 .input {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .pokemon-list {
@@ -132,7 +131,13 @@ body {
     padding: 20px;
 }
 
-.loading{
+.loading {
+    margin-top: 20px;
+    font-family: Montserrat;
+    font-size: 50px;
+}
+
+.notfound {
     margin-top: 20px;
     font-family: Montserrat;
     font-size: 50px;
@@ -158,11 +163,8 @@ body {
 
 @media screen and (max-width: 480px) {
     .input {
-        width: 100%; 
-        margin: 0; 
+        width: 100%;
+        margin: 0;
     }
 }
-
-
-
 </style>

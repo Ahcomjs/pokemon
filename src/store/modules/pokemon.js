@@ -13,7 +13,7 @@ const mutations = {
 const actions = {
     async fetchPokemonList({ commit }, { ability = null } = {}) {
         try {
-            const response = await fetchPokemonData(1025, ability); // Llamamos con habilidad si se pasa
+            const response = await fetchPokemonData(1025, ability); 
             commit("SET_POKEMON_LIST", response);
         } catch (error) {
             console.error(error);
