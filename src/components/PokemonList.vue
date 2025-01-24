@@ -49,8 +49,10 @@ export default {
     computed: {
         ...mapState('pokemon', ['pokemonList']),
         filteredPokemonList() {
+            const searchQueryWithoutSpaces = this.searchQuery.replace(/\s+/g, '').toLowerCase();
             return this.pokemonList.filter(pokemon => {
-                const matchesName = pokemon.name.toLowerCase().includes(this.searchQuery.toLowerCase());
+                const pokemonNameWithoutSpaces = pokemon.name.replace(/\s+/g, '').toLowerCase();
+                const matchesName = pokemonNameWithoutSpaces.includes(searchQueryWithoutSpaces);
                 const matchesType = this.selectedType
                     ? pokemon.types.some(type => type.toLowerCase() === this.selectedType)
                     : true;
@@ -130,7 +132,7 @@ body {
     padding: 20px;
 }
 
-.found-text{
+.found-text {
     margin-top: 20px;
     font-family: Montserrat;
     font-size: 50px;

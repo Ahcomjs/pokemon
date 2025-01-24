@@ -17,7 +17,7 @@ export async function fetchPokemonData(limit = 1025, ability = null) {
                 id: pokemonDetails.data.id,
                 name: pokemonDetails.data.name,
                 abilities: pokemonDetails.data.abilities.map(ability => ability.ability.name),
-                imageUrl: pokemonDetails.data.sprites.front_default,
+                imageUrl: pokemonDetails.data.sprites.other.home.front_default,
                 stats: pokemonDetails.data.stats.map(stat => ({
                     name: stat.stat.name,
                     base: stat.base_stat

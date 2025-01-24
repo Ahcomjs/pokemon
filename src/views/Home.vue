@@ -19,7 +19,6 @@ export default {
 <style scoped>
 .home {
     text-align: center;
-    
 }
 
 .logo {
@@ -37,5 +36,4 @@ export default {
         max-width: 300px;
     }
 }
-
 </style>
