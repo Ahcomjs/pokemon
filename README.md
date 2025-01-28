@@ -4,9 +4,10 @@
 
 <h1 align="center">POKÉDEX</h1>
 
-<p align="center">
- A Pokedex is an application that allows you to explore and get information about different Pokémon.
-</p>
+## About
+
+A Pokedex is an application that allows you to explore and get information about different Pokémon.
+
 
 ## Some of the technologies used
 
