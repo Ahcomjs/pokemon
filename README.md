@@ -5,20 +5,19 @@
 <h1 align="center">POKÉDEX</h1>
 
 <p align="center">
-    Una Pokedex es una aplicación que te permite explorar y obtener información sobre diferentes Pokémon.
+ A Pokedex is an application that allows you to explore and get information about different Pokémon.
 </p>
 
-## Algunas de las tecnologías utilizadas
+## Some of the technologies used
 
-- **Vue.js**: Framework de JavaScript utilizado para construir la interfaz de usuario de la Pokedex.
-- **Vite**: Herramienta de compilación rápida utilizada para el desarrollo de aplicaciones web con Vue.js.
-- **Vuex**: Biblioteca de gestión de estado utilizada para mantener el estado de la aplicación y facilitar la comunicación entre componentes.
-- **HTML y CSS**: Utilizados para estructurar y dar estilo a la aplicación.
-- **API de Pokémon**: Se utiliza una API de Pokémon para obtener los datos y la información necesaria sobre los Pokémon.
-- **Jest**: Framework de pruebas utilizado para escribir y ejecutar pruebas unitarias.
-- **Vitest**: Plugin de Vite que habilita las pruebas de unidad integradas para proyectos Vite.
-
-
+- **Vue.js**: JavaScript framework used to build the user interface of the Pokedex.
+- **Vite**: Fast build tool used for web application development with Vue.js.
+- **Vuex**: State management library used to maintain the application state and facilitate communication between components.
+- **HTML and CSS**: Used to structure and style the application.
+- **Pokémon API**: A Pokémon API is used to fetch the necessary data and information about the Pokémon.
+- **Jest**: Testing framework used to write and run unit tests.
+- **Vitest**: Vite plugin that enables integrated unit testing for Vite projects.
+- 
 ## Project Setup
 
 ```sh
