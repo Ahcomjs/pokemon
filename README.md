@@ -17,7 +17,7 @@
 - **Pokémon API**: A Pokémon API is used to fetch the necessary data and information about the Pokémon.
 - **Jest**: Testing framework used to write and run unit tests.
 - **Vitest**: Vite plugin that enables integrated unit testing for Vite projects.
-- 
+  
 ## Project Setup
 
 ```sh
