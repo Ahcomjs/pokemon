@@ -31,7 +31,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, onSelectPokemon }) =
         />
       </div>
       <div className="relative z-10 text-center">
-        <p className="text-2xl font-montserrat-extrabold text-gray-900 dark:text-white capitalize drop-shadow-sm tracking-wide">
+        <p className="text-2xl font-montserrat-extrabold text-gray-900 break-words dark:text-white capitalize drop-shadow-sm tracking-wide">
           {pokemon.name}
         </p>
         <p className="text-sm text-gray-600 font-montserrat-black dark:text-gray-300 mt-1">
